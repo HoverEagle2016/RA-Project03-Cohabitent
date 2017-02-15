@@ -1,3 +1,4 @@
+
 a {
 	text-decoration: none;
 	font-family: fontAccentNormal;
@@ -12,6 +13,7 @@ ol {
 
 li {
 	padding: 5px 12px;
+	
 }
 
 form {
@@ -19,6 +21,8 @@ form {
 }
 
 .navBar{
+	position: fixed;
+  width: 100%;
 	display:flex;
 	justify-content: space-between;
 }
