@@ -3,3 +3,8 @@
 	font-family: fontAccentNormal;
 	src: url(assets/fonts/Novecento/Novecentosanswide-Normal.ttf);
 }
+
+@font-face {
+	font-family:MerriweatherLight;
+	src: url(assets/fonts/Merriweather/Merriweather-Light.ttf);
+}

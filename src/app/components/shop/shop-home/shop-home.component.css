@@ -1,0 +1,21 @@
+h1 {
+	text-align: center;
+	font-family: fontAccentNormal;
+}
+
+.shopStuff {
+	display: flex;
+	text-align: center;
+	font-family: MerriweatherLight;
+}
+
+.productType {
+	width: 25%;
+}
+
+img {
+	width: 50%;
+	height: 50%;
+	display: block;
+	margin: 0 auto;
+}
