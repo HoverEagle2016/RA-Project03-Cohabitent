@@ -1,0 +1,35 @@
+.flex {
+	display: flex;
+}
+.flex-space-between{
+	justify-content: space-between;
+}
+
+.footer-col{
+	margin-left: 10%;
+	white-space: nowrap;
+}
+
+.logo-text{
+	text-align: right;
+}
+
+.copyright {
+	align-self: center;
+}
+
+footer {
+	flex-direction: column;
+	color: white;
+	min-height: 40vh;
+	background-image: url(../../../assets/images/dark-wood@2x.png);
+}
+
+h3{
+	font-family: fontAccentBold;
+}
+
+p {
+	font-family:MerriweatherLight;
+}
+

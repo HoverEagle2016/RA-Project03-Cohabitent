@@ -5,6 +5,11 @@
 }
 
 @font-face {
+	font-family: fontAccentBold;
+	src: url(assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf);
+}
+
+@font-face {
 	font-family:MerriweatherLight;
 	src: url(assets/fonts/Merriweather/Merriweather-Light.ttf);
 }

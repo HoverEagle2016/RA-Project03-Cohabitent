@@ -13,6 +13,7 @@ import { JournalHomeComponent } from './components/journal/journal-home/journal-
 import { JournalEntryComponent } from './components/journal/journal-entry/journal-entry.component';
 import { JournalNewComponent } from './components/journal/journal-new/journal-new.component';
 import { JournalListComponent } from './components/journal/journal-list/journal-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { JournalListComponent } from './components/journal/journal-list/journal-
     JournalHomeComponent,
     JournalEntryComponent,
     JournalNewComponent,
-    JournalListComponent
+    JournalListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

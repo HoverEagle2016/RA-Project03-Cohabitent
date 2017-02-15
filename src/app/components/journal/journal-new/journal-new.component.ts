@@ -11,15 +11,15 @@ import {JournalEntry} from '../journal-entry';
 })
 export class JournalNewComponent implements OnInit {
 
+  public entry: JournalEntry;
+  
   constructor(private journalService: JournalService) { }
-
+   
   ngOnInit() {
   }
 
   createEntry() {
-
-  	
-  	
+      	
   }
  
 }
