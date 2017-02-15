@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import {JournalService} from '../journal-service.service';
+
+import {JournalEntry} from '../journal-entry';
+
 @Component({
   selector: 'cohab-journal-new',
   templateUrl: './journal-new.component.html',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JournalNewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private journalService: JournalService) { }
 
   ngOnInit() {
   }
 
+  createEntry() {
+
+  	
+  	
+  }
+ 
 }

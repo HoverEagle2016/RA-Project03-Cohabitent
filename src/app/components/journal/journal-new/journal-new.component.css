@@ -1,0 +1,16 @@
+.flex {
+	display: flex;
+}
+
+.flex-column{
+	flex-direction: column;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+button {
+	width:10%;
+	margin-left: 5%;
+}
