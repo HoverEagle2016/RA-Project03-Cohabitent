@@ -37,3 +37,14 @@ export class JournalNewComponent implements OnInit {
      console.log(this.journals);
    }
 }
+
+
+
+
+
+
+
+
+
+
+
