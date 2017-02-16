@@ -18,24 +18,23 @@ export class JournalNewComponent implements OnInit {
    
   ngOnInit() {
     this.entry = new JournalEntry();
-    this.getJournals();
+    
 
   }
 
   submitEntry(){
-    this.params = JSON.stringify(this.entry);
-    // console.log(JSON.stringify($("#apiForm").serializeArray()));
-    this.journalService.postEntry(encodeURI(this.params));  
+    this.params = "[" + JSON.stringify(this.entry) + "]";
+    // console.log(this.params);
+    let paramters = JSON.stringify($("#apiForm").serializeArray());
+    console.log(paramters);
+    // this.journalService.postEntry(encodeURI(paramters));  
+    this.journalService.postEntry(paramters); 
   }
    
-   pushEntry(entry: JournalEntry){
-     this.journals.push(entry);
-   }
+   // pushEntry(entry: JournalEntry){
+   //   this.journals.push(entry);
+   // }
  
-   getJournals() {
-     this.journalService.getJournals().then(journals => this.journals = journals);
-     console.log(this.journals);
-   }
 }
 
 
