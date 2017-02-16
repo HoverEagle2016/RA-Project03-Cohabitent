@@ -1,3 +1,4 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <form class="flex flex-column"  id="apiForm" method="post">
 	
 	<div class="flex flex-row" >
@@ -12,7 +13,7 @@
 		</div>
 		
 	  <div class="flex flex-column">
-	  	<input [(ngModel)]="entry.title" name="title" placholder="nike test post">
+	  	<input [(ngModel)]="entry.title" name="title" value="nike test post">
 	  	<input [(ngModel)]="entry.image" name="image" placholder="http://www.pngall.com/wp-content/uploads/2016/06/Nike-Logo-Free-PNG-Image.png">
 	  	<input [(ngModel)]="entry.categories" name="categories" placholder="awesome,kitty">
 	  	<input [(ngModel)]="entry.posts_per_page" name="posts_per_page" placholder="5">
@@ -21,5 +22,5 @@
 	  </div>
 
   </div>
-	<button>Submit</button>
+	<button (click)="submitEntry()">Submit</button>
 </form>
