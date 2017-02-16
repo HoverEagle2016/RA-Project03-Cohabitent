@@ -8,8 +8,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class JournalService {
 	
-	private headers = new Headers({'Content-Type': 'application/json'});
-	entries: JournalEntry[];
+	headers = new Headers({'Content-Type': 'application/json'});
+	entries: JournalEntry[] = <JournalEntry[]>[];
 	postURL: string;
 	getURL: string = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
 
