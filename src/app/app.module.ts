@@ -14,6 +14,7 @@ import { JournalEntryComponent } from './components/journal/journal-entry/journa
 import { JournalNewComponent } from './components/journal/journal-new/journal-new.component';
 import { JournalListComponent } from './components/journal/journal-list/journal-list.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AdventureHomeComponent } from './components/adventure/adventure-home/adventure-home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     JournalEntryComponent,
     JournalNewComponent,
     JournalListComponent,
-    FooterComponent
+    FooterComponent,
+    AdventureHomeComponent
   ],
   imports: [
     BrowserModule,
