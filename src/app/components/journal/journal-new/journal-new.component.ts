@@ -17,9 +17,7 @@ export class JournalNewComponent implements OnInit {
   constructor(private journalService: JournalService) { }
    
   ngOnInit() {
-    this.entry = new JournalEntry();
-    
-
+    this.entry = new JournalEntry(); 
   }
 
   submitEntry(){

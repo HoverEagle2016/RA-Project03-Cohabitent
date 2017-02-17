@@ -25,6 +25,7 @@ form {
   width: 100%;
 	display:flex;
 	justify-content: space-between;
+	z-index: 3;
 }
 .navIcon {
 	width: 2rem;

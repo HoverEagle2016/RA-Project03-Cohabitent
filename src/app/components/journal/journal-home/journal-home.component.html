@@ -1,33 +1,52 @@
+<head>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css" rel="stylesheet"  />
+	
+</head>
+
 <h1>INHABITENT JOURNAL</h1>
-<div class="shopStuff flex">
-	<div class="productType">
-		<img src="../../../assets/images/blog-photos/warm-cocktail.jpg">
-		<div class="flex">
-			<p>14, April 2016 / </p> 
-			<p> 3 comments</p>
-		</div>
-		<p>VAN CAMPING PHOTO CONTEST</p>
-		<button>READ ENTRY</button>
-	</div>
 
-	<div class="productType">
-		<img src="../../../assets/images/blog-photos/warm-cocktail.jpg">
+<cohab-carousel class="carousel" [options]="{navigation: true, pagination: true, rewindNav : true,
+    itemsDesktop: [1400, 4],
+    itemsDesktopSmall: [1230, 3],   
+    itemsTablet: [600, 2], 
+    itemsMobile: [480, 1]}">
+<div *ngFor = "let journal of journals_mock" class="productType">
+		<img src={{journal.image}}>
 		<div class="flex">
-			<p>14, April 2016 / </p> 
-			<p> 3 comments</p>
+			<p>{{journal.date}} / </p> 
+			<p> {{journal.categories.count}} comments</p>
 		</div>
-		<p>VAN CAMPING PHOTO CONTEST</p>
+		<p>{{journal.title}}</p>
 		<button>READ ENTRY</button>
-	</div>
-
-	<div class="productType">
-		<img src="../../../assets/images/blog-photos/warm-cocktail.jpg">
-		<div class="flex">
-			<p>14, April 2016 / </p> 
-			<p> 3 comments</p>
-		</div>
-		<p>VAN CAMPING PHOTO CONTEST</p>
-		<button>READ ENTRY</button>
-	</div>
-
 </div>
+</cohab-carousel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

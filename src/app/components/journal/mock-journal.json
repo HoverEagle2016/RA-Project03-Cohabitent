@@ -1,5 +1,5 @@
 {
-	"count":3,
+	"count":4,
 	"0":{
 		"ID":16,
 		"title":"nike test post",
@@ -19,6 +19,15 @@
 		"author":""
 		},
 	"2":{
+		"ID":1,
+		"title":"Hello world!",
+		"content":"Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
+		"categories":["Uncategorized"],
+		"image":false,
+		"date":"February 14, 2017",
+		"author":"camp_admin"
+		},
+	"3":{
 		"ID":1,
 		"title":"Hello world!",
 		"content":"Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
