@@ -27,9 +27,8 @@ export class JournalService {
   	return this.http.get(this.fixed_getURL)
                .toPromise()
                .then(response => {
-                 this.entries = response.json() as JournalEntry[];
-                 console.log("SERVICE:");
-                 console.log(this.entries);
+                 let entries = response.json();
+                 console.log(Object.keys(entries));
 
                  return this.entries;
                })

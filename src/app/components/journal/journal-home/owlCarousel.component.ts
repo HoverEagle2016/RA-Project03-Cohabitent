@@ -17,17 +17,11 @@ export class OwlCarouselComponent {
   ngAfterViewInit() {
     for (var key in this.options) {
       this.defaultOptions[key] = this.options[key];
-    }
-    console.log(this.$owlElement);
+    } 
     this.$owlElement = $(this.el.nativeElement).owlCarousel(this.defaultOptions);
-    console.log(this.$owlElement);
-    console.log(this.defaultOptions);
   }
 
-  ngOnDestroy() {
-    //this.$owlElement.data('owlCarousel').destroy();
-    //this.$owlElement = null;
-  }
+ 
 }
 
 

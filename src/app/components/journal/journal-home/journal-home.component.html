@@ -13,15 +13,17 @@
     itemsDesktopSmall: [1230, 3],   
     itemsTablet: [600, 2], 
     itemsMobile: [480, 1]}">
-<div *ngFor = "let journal of journals_mock" class="productType">
-		<img src={{journal.image}}>
-		<div class="flex">
-			<p>{{journal.date}} / </p> 
-			<p> {{journal.categories.count}} comments</p>
+	<div *ngIf="journals">
+		<div *ngFor = "let journal of journals" class="productType">
+				<img src={{journal.image}}>
+				<div class="flex">
+					<p>{{journal.date}} / </p> 
+					<p> 3 comments</p>
+				</div>
+				<p>{{journal.title}}</p>
+				<button>READ ENTRY</button>
 		</div>
-		<p>{{journal.title}}</p>
-		<button>READ ENTRY</button>
-</div>
+	</div>
 </cohab-carousel>
 
 
