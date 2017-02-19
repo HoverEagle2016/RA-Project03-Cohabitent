@@ -10,6 +10,10 @@
 	flex-direction: row;
 }
 
+form{
+	padding-top: 70px;
+}
+
 button {
 	width:10%;
 	margin-left: 5%;

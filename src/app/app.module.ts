@@ -16,6 +16,9 @@ import { JournalListComponent } from './components/journal/journal-list/journal-
 import { FooterComponent } from './components/footer/footer.component';
 import { AdventureHomeComponent } from './components/adventure/adventure-home/adventure-home.component';
 import { OwlCarouselComponent } from './components/journal/journal-home/owlCarousel.component';
+import { HomeComponent } from './components/home/home.component';
+
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -30,12 +33,14 @@ import { OwlCarouselComponent } from './components/journal/journal-home/owlCarou
     JournalListComponent,
     FooterComponent,
     AdventureHomeComponent,
-    OwlCarouselComponent
+    OwlCarouselComponent,
+    HomeComponent, 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing
   ],
   providers: [JournalService],
   bootstrap: [AppComponent]

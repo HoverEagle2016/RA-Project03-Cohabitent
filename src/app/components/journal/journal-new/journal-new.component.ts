@@ -5,6 +5,7 @@ import {JournalService} from '../journal-service.service';
 import {JournalEntry} from '../journal-entry';
 
 @Component({
+  moduleId: module.id,
   selector: 'cohab-journal-new',
   templateUrl: './journal-new.component.html',
   styleUrls: ['./journal-new.component.css']
