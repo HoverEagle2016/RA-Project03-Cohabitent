@@ -1,13 +1,24 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
 
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 import {JournalEntry} from './journal-entry';
 
 import 'rxjs/add/operator/toPromise';	
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class JournalService {
-	
+
+  journals: Observable<JournalEntry[]>;
+  private _journals: BehaviorSubject<JournalEntry[]>;
+  private baseUrl: string;
+  private dataStore: {
+    journals: JournalEntry[];
+	}
+
   private journalURL = "http://portal.helloitscody.com/inhabitent/api";
   private GET = "/get";
   private POST = "/post";
@@ -20,19 +31,43 @@ export class JournalService {
 	postURL: string;
 	fixed_getURL: string = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) { 
+    this.baseUrl = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
+    this.dataStore = {
+      journals: []
+    }
+    this._journals = <BehaviorSubject<JournalEntry[]>> new BehaviorSubject([]);
+    this.journals = this._journals.asObservable();
+ 
+  }
   
-  getJournals(): Promise <JournalEntry[]>{
-  	// this.getURL = this.journalURL + this.GET + this.token + "?params=";
-  	return this.http.get(this.fixed_getURL)
-               .toPromise()
-               .then(response => {
-                 let entries = response.json();
-                 console.log(Object.keys(entries));
+  // getJournals(): Promise <JournalEntry[]>{
+  // 	// this.getURL = this.journalURL + this.GET + this.token + "?params=";
+  // 	return this.http.get(this.fixed_getURL)
+  //              .toPromise()
+  //              .then(response => {
+  //                let entries = response.json();
+  //                console.log(Object.keys(entries));
 
-                 return this.entries;
-               })
-               .catch(this.handleError);
+  //                return this.entries;
+  //              })
+  //              .catch(this.handleError);
+  // }
+
+  getJournals() {
+    this.http.get(this.baseUrl).map(response => {
+      return response.json();
+    })
+    .subscribe(data => {
+      let journalArray = [];
+      for (let key in data) {
+           if (key != 'count') {
+          journalArray.push(data[key]);
+        }       
+      }     
+      this.dataStore.journals = journalArray;
+      this._journals.next(Object.assign({}, this.dataStore).journals);      
+    }, error => console.log('Could not load todos.'));
   }
 
    private handleError(error: any): Promise<any> {
