@@ -13,3 +13,7 @@
 	font-family:MerriweatherLight;
 	src: url(assets/fonts/Merriweather/Merriweather-Light.ttf);
 }
+
+html {
+	line-height: 1.75rem;
+}
