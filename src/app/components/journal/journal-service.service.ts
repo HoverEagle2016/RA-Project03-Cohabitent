@@ -12,12 +12,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class JournalService {
 
+  journal: Observable<JournalEntry>;
   journals: Observable<JournalEntry[]>;
   private _journals: BehaviorSubject<JournalEntry[]>;
+  private _journal: BehaviorSubject<JournalEntry>;
+
   private baseUrl: string;
   private dataStore: {
     journals: JournalEntry[];
+    journal: JournalEntry;
 	}
+  
 
   private journalURL = "http://portal.helloitscody.com/inhabitent/api";
   private GET = "/get";
@@ -34,11 +39,14 @@ export class JournalService {
   constructor(private http: Http) { 
     this.baseUrl = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
     this.dataStore = {
-      journals: []
+      journals: [],
+      journal: new JournalEntry
     }
     this._journals = <BehaviorSubject<JournalEntry[]>> new BehaviorSubject([]);
     this.journals = this._journals.asObservable();
- 
+
+    this._journal = <BehaviorSubject<JournalEntry>> new BehaviorSubject<JournalEntry>(new JournalEntry);
+    this.journal = this._journal.asObservable();
   }
   
   // getJournals(): Promise <JournalEntry[]>{
@@ -64,11 +72,26 @@ export class JournalService {
            if (key != 'count') {
           journalArray.push(data[key]);
         }       
-      }     
+      }
       this.dataStore.journals = journalArray;
-      this._journals.next(Object.assign({}, this.dataStore).journals);      
-    }, error => console.log('Could not load todos.'));
+      this._journals.next(Object.assign({}, this.dataStore).journals);     
+    }, error => console.log('Could not load journals.'));
+
   }
+
+  getJournalById(id: string) {
+    this.http.get(this.baseUrl).map(response => {
+      return response.json();
+    })
+    .subscribe(data => {    
+      for (let key in data) {
+           if (data[key]["ID"] == id) {
+          this.dataStore.journal = data[key];
+        }       
+      }
+      this._journal.next(Object.assign({}, this.dataStore).journal);   
+    }, error => console.log('Could not load journal.'));
+  } 
 
    private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
@@ -77,7 +100,7 @@ export class JournalService {
 
   postEntry(params: string): Promise <JournalEntry>{
     this.postURL = this.journalURL + this.POST + this.token + "?params=" + params;
-    console.log(this.postURL);
+    // console.log(this.postURL);
     // this.headers.append('Access-Control-Allow-Headers','Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With');
     
     return this.http

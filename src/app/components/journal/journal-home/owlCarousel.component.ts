@@ -23,7 +23,6 @@ export class OwlCarouselComponent implements OnInit{
     } 
     this.$owlElement = $(this.el.nativeElement).owlCarousel(this.defaultOptions);
 
-      console.log('carousel afterViewInit component');
    }
 
    ngOnInit() {

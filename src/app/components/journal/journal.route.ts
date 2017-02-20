@@ -5,6 +5,6 @@ import { JournalNewComponent } from './journal-new/journal-new.component';
 
 // Route Configuration
 export const journalRoutes: Routes = [
-  { path: 'journals/:id', component: JournalEntryComponent }, 
+  { path: 'journal-entry/:id', component: JournalEntryComponent }, 
   { path: 'journals-new', component: JournalNewComponent},
 ];

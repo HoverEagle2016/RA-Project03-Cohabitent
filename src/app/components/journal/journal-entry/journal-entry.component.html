@@ -4,14 +4,15 @@
 		<div id="main">
 			<article>
 				<header class="entry-header">
-					<img src="../../../../assets/images/blog-photos/van-camper.jpg">
-					<h1 class="entry-title">VAN CAMPING PHOTO CONTEST</h1>
+
+					<img src="{{(journal | async)?.image}}">
+					<h1 class="entry-title">{{(journal | async)?.title}}</h1>
 					<div class="entry-meta">
-						<span class="posted-on">16 FEB 2017</span>
+						<span class="posted-on">{{(journal | async)?.date}}</span>
 						 / 
-						<span class="comments-link"> 4 comments</span>
+						<span class="comments-link">4 comments</span>
 						 / 
-						<span class="byline">by Jeremy </span>
+						<span class="byline">{{(journal | async)?.author}} </span>
 					</div>
 				</header> <!--entry-header -->
 				

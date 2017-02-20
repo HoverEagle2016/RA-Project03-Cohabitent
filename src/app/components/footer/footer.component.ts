@@ -13,10 +13,4 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  btnOnClick(){
-  	console.log('test');
-  	this.router.navigate['/journals/new'];
-  }
-
 }

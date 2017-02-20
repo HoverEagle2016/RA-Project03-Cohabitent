@@ -19,11 +19,15 @@
 		<div *ngFor = "let journal of journals | async" class="productType">
 				<img src={{journal.image}}>
 				<div class="flex">
+					<p>{{journal.ID}}</p>
 					<p>{{journal.date}} / </p> 
 					<p> 3 comments</p>
 				</div>
 				<p>{{journal.title}}</p>
-				<button>READ ENTRY</button>
+				<a [routerLink]="['/journal-entry', journal.ID]">
+					<button>READ ENTRY</button>
+				</a>
+				
 		</div>
 	</div>
 
