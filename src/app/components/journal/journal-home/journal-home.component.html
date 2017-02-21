@@ -1,25 +1,10 @@
-<!-- <head>
-	
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css" rel="stylesheet"  />
-   
-	
-</head> -->
 
 <h1>INHABITENT JOURNAL</h1>
 
-<cohab-carousel class="carousel" [options]="{navigation: true, pagination: true, rewindNav : true,
-    itemsDesktop: [1400, 4],
-    itemsDesktopSmall: [1230, 3],   
-    itemsTablet: [600, 2], 
-    itemsMobile: [480, 1]}">
-
-	<div *ngIf="journals">
+	<div class="owl-carousel" *ngIf="journals">
 		<div *ngFor = "let journal of journals | async" class="productType">
 				<img src={{journal.image}}>
-				<div class="flex">
-					<p>{{journal.ID}}</p>
+				<div>
 					<p>{{journal.date}} / </p> 
 					<p> 3 comments</p>
 				</div>
@@ -30,8 +15,6 @@
 				
 		</div>
 	</div>
-
-</cohab-carousel>
 
 
 

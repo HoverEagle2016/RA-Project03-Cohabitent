@@ -62,6 +62,34 @@ export class JournalService {
   //              .catch(this.handleError);
   // }
 
+   owlCarousel () {
+          
+         $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              responsiveClass:true,
+              responsive:{
+                  0:{
+                      items:1,
+                      nav:true
+                  },
+                  600:{
+                      items:2,
+                      nav:false
+                  },
+                  1050:{
+                      items:3,
+                      nav:true,
+                      loop:false
+                    }
+                }
+            })
+
+        });
+
+    }
+
   getJournals() {
     this.http.get(this.baseUrl).map(response => {
       return response.json();
@@ -74,7 +102,8 @@ export class JournalService {
         }       
       }
       this.dataStore.journals = journalArray;
-      this._journals.next(Object.assign({}, this.dataStore).journals);     
+      this.owlCarousel();
+      this._journals.next(Object.assign({}, this.dataStore).journals); 
     }, error => console.log('Could not load journals.'));
 
   }

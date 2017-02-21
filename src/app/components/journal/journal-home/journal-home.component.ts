@@ -1,5 +1,4 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { OwlCarouselComponent } from './owlCarousel.component';
 
 import {JournalService} from '../journal-service.service';
 
@@ -26,8 +25,10 @@ export class JournalHomeComponent implements OnInit {
   ngOnInit() {
     this.journals = this.journalService.journals;
     this.journalService.getJournals();
-  }
+      
     
+  }
+   
 }
 
 

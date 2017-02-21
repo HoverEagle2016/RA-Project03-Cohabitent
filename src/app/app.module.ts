@@ -15,7 +15,6 @@ import { JournalNewComponent } from './components/journal/journal-new/journal-ne
 import { JournalListComponent } from './components/journal/journal-list/journal-list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AdventureHomeComponent } from './components/adventure/adventure-home/adventure-home.component';
-import { OwlCarouselComponent } from './components/journal/journal-home/owlCarousel.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { routing } from './app.routes';
@@ -33,7 +32,6 @@ import { routing } from './app.routes';
     JournalListComponent,
     FooterComponent,
     AdventureHomeComponent,
-    OwlCarouselComponent,
     HomeComponent, 
   ],
   imports: [
