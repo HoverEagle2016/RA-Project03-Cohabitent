@@ -63,12 +63,12 @@ export class JournalService {
   // }
 
    owlCarousel () {
-          
          $(document).ready(function(){
             $('.owl-carousel').owlCarousel({
               loop:true,
               margin:10,
-              responsiveClass:true,
+              nav: true,
+              dots:true,
               responsive:{
                   0:{
                       items:1,
@@ -81,13 +81,10 @@ export class JournalService {
                   1050:{
                       items:3,
                       nav:true,
-                      loop:false
                     }
-                }
+                }, 
             })
-
         });
-
     }
 
   getJournals() {

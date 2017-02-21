@@ -2,15 +2,20 @@
 <h1>INHABITENT JOURNAL</h1>
 
 	<div class="owl-carousel" *ngIf="journals">
-		<div *ngFor = "let journal of journals | async" class="productType">
-				<img src={{journal.image}}>
-				<div>
-					<p>{{journal.date}} / </p> 
-					<p> 3 comments</p>
+		<div *ngFor = "let journal of journals | async" class="postItem">
+				<div class="thumbnail-img">
+					<img src={{journal.image}}>
 				</div>
-				<p>{{journal.title}}</p>
-				<a [routerLink]="['/journal-entry', journal.ID]">
-					<button>READ ENTRY</button>
+				<div class="post-quickInfo">
+					<p>{{journal.date}}</p> 
+					<h3>
+						<a [routerLink]="['/journal-entry', journal.ID]">
+						{{journal.title}}
+					</a>
+					</h3>
+				</div>
+				<a [routerLink]="['/journal-entry', journal.ID]" class="btn">
+					READ ENTRY
 				</a>
 				
 		</div>
