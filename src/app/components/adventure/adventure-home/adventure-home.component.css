@@ -26,7 +26,7 @@ li:first-child:before {
 li:first-child {
 	/*border-left: 15px solid white;*/
 	border-right: 1vw solid white;
-	width: 49%;	
+	width: 48%;	
 }
 
 li:nth-child(2):before {
@@ -34,8 +34,8 @@ li:nth-child(2):before {
 }
 
 li:nth-child(2) {
-	border-right: 1vw solid white;
-	width: 49%;		
+	
+	width: 50%;		
 }
 
 li:nth-child(3):before {
@@ -45,7 +45,7 @@ li:nth-child(3):before {
 li:nth-child(3){
 	
 	border-top: 1vw solid white;
-	width: 20%;	
+	width: 24.5%;	
 }
 
 li:last-child:before{
@@ -54,7 +54,11 @@ padding-top: 100%
 
 li:last-child{
 	border: 1vw solid white;
-	width: 20%;	
+	width: 24.5%;	
+}
+
+.bonfire-img{
+	top:100%;
 }
 
 img {

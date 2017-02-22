@@ -77,7 +77,7 @@ export class JournalService {
                   600:{
                       items:2,                     
                   },
-                  1050:{
+                  1000:{
                       items:3,
                     }
                 }, 

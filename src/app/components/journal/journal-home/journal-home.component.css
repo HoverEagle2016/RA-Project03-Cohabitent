@@ -1,13 +1,3 @@
-.flex {
-	display: flex;
-}
-
-.shopStuff {
-	align-items: center;
-  justify-content: center;
-	min-height: 10vh;
-	font-family: MerriweatherLight;
-}
 
 .postItem {
 	margin-left: 2vw;
@@ -30,7 +20,7 @@ h1 {
 
 img {
 	width: 100%;
-	height:50vh;
+	height:33vh;
 }
 
 p{
