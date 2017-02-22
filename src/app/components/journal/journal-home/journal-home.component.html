@@ -1,7 +1,7 @@
 
 <h1>INHABITENT JOURNAL</h1>
 
-	<div class="owl-carousel" *ngIf="journals">
+	<div class="owl-carousel owl-theme" *ngIf="journals">
 		<div *ngFor = "let journal of journals | async" class="postItem">
 				<div class="thumbnail-img">
 					<img src={{journal.image}}>
