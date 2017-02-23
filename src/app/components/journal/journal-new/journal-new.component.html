@@ -4,9 +4,11 @@
 	<div class="flex flex-row" >
 	 
 		<div class="flex flex-column" >
-			<label for="title">Title:</label>
+			<label for="title">Title *:</label>
+			<label>Categories:</label>
+			<label>Author:</label>
 			<label>Image:</label>
-			<label>Content:</label>	
+			<label>Content *:</label>	
 		</div>
 		
 <div class="flex flex-column">
@@ -23,12 +25,23 @@
 		    </div>
 </div>
 	  	
-
+			<input type="text" name="categories" placeholder="shoes, fashion">
+			<input type="text" name="author" placeholder="jeremy">
 	  	<input id="image" type="text" name="image" placeholder="http://www.pngall.com/wp-content/uploads/2016/06/Nike-Logo-Free-PNG-Image.png"
 	  	[(ngModel)]="entry.image">
 	 		
-	 		<textarea id="content" type="text" rows="20" cols="100" name="content" placeholder="Nike is an awesome brand! I buy Nike shoes."
+	 		<textarea required minlength="8" #content="ngModel" [(ngModel)]="entry.content" id="content" type="text" rows="20" cols="100" name="content" placeholder="Nike is an awesome brand! I buy Nike shoes."
 	 		[(ngModel)]="entry.content"></textarea>
+
+	 		<div *ngIf="content.errors && (content.dirty || content.touched)"
+     class="alert-danger">
+		    <div [hidden]="!content.errors.required">
+		      Title is required
+		    </div>
+		    <div [hidden]="!content.errors.minlength">
+		      Title must be at least 4 characters long.
+		    </div>
+</div>
 	  </div>
   </div>
 

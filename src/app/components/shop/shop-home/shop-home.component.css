@@ -16,9 +16,11 @@
       box-sizing: border-box;;
 }
 
-h1 {
+h2 {
 	text-align: center;
 	font-family: fontAccentNormal;
+	font-size: 1.5rem;
+	margin: 40px 0;
 }
 
 img {

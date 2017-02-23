@@ -1,22 +1,36 @@
+h3 {
+	font-size: 1.5rem;
+	font-family: fontAccentBold;	
+}
+
+i {
+	margin-right: 10px;
+}
+
 .site-content{
 	display: flex;
 }
 
 .content-area {
-	width: 73%;
+	padding: 3%;
+	width: 67%;
+	border-top: 3px solid #e1e1e1;
 }
 
 .widget-area {
+	padding-left: 2%;
 	width: 27%;
 	float: right;
+	border-top: 3px solid #e1e1e1;
+	border-left: 3px solid #e1e1e1;
 }
 .site-content {
-	padding-top: 60px;
+	padding-top: 72px;
 }
 
 .entry-header {
 	position: relative;
-	width: 80%;
+	width: 94%;
 }
 
 .entry-title {
