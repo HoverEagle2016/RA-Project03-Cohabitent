@@ -30,10 +30,61 @@
 	background-color: #248a83;
 	color: white;
 	position: absolute;
-	bottom: 0;
+	bottom: 9px;
 	right: 0;
+}
+
+.entry-content {
+	margin: 5vh 0;
+}
+
+.cat-link,.tags-link {
+font-family: MerriweatherBold;	
+margin: 10px;
+} 
+
+.cat-link {
+	margin-left: 0;
+}
+
+.social-btns {
+	margin: 10px 0;
+}
+
+.posted-on,.comments-link {
+	font-family: MerriweatherBold;
+}
+
+h1 {
+	font-family: Novecento Sans Web,sans-serif;
+	text-transform: uppercase;
 }
 
 img {
 	width: 100%;
 }
+
+a {
+	color: #248a83;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input,textarea{
+	color: #666;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

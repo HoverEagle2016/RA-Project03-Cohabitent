@@ -1,5 +1,4 @@
 <div id="content" class="site-content">
-
 	<div id="primary" class="content-area">
 		<div id="main">
 			<article>
@@ -17,12 +16,12 @@
 				</header> <!--entry-header -->
 				
 				<div class="entry-content">
-					<p>Some Contents</p>
-					<p>Some Contents</p>
+					<p>{{(journal | async)?.content}}</p>
+					
 				</div> <!--entry-content -->
 				
 				<footer class="entry-footer">
-					<span class="category-link">POSTED IN -> 
+					<span class="cat-link">POSTED IN -> 
 						<a href="#">CONTESTS</a>
 					</span>
 					<span class="tags-link">TAGGED ->
@@ -30,15 +29,15 @@
 					</span>
 					<div class="social-btns">
 						
-						<button>
+						<button class="btn black-btn">
 							<i class="fa fa-facebook"></i>
 							Like
 						</button>
-						<button>
+						<button class="btn black-btn">
 							<i class="fa fa-twitter"></i>
 							Tweet
 						</button>
-						<button>
+						<button class="btn black-btn">
 							<i class="fa fa-pinterest"></i>
 							Pin
 						</button>
@@ -60,7 +59,7 @@
 						<form>
 							<p>Want to join the discussion? Feel free to contribute!</p>
 							<p class="comment-form-comment">
-								<label for="comment"></label>
+								<label for="comment">COMMENT</label>
 								<textarea id="comment" cols="150" rows="20"></textarea>
 							</p>
 							<p class="comment-form-name"></p>

@@ -2,15 +2,18 @@
 .postItem {
 	margin-left: 2vw;
 	border: 3px solid #e1e1e1;
+	padding-bottom: 20px;
 }
 
 .post-quickInfo{
 	border-top: 3px solid #e1e1e1;
+	padding-left: 20px;
 }
 
 h3 a{
 	color: #248a83;
 	text-decoration: none;
+	font-size:1.4rem;
 }
 
 h1 {
@@ -31,6 +34,9 @@ p{
     box-sizing: inherit;
 }
 
+.detail {
+	margin-left: 20px;
+}
 
 
 

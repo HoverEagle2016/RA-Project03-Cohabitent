@@ -14,6 +14,11 @@
 	src: url(assets/fonts/Merriweather/Merriweather-Light.ttf);
 }
 
+@font-face {
+	font-family: MerriweatherBold;
+	src: url(assets/fonts/Merriweather/Merriweather-Bold.ttf);
+}
+
 html {
 	line-height: 1.75rem;
 	box-sizing: border-box;
@@ -30,3 +35,20 @@ html {
     text-transform: uppercase;
 }
 
+.black-btn {
+    border: 1px solid #000;
+    color: #000;
+    background-color: white;
+}
+
+.white-btn {
+		border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+	cursor: pointer;
+}

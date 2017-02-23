@@ -1,6 +1,6 @@
 
 a {
-	text-decoration: none;
+	color: #248a83;
 	font-family: fontAccentNormal;
 }
 
@@ -12,29 +12,40 @@ ol {
 }
 
 li {
-	padding: 5px 12px;
-	
+	padding: 5px 12px;	
+}
+
+nav {
+	margin-top: 7px;
 }
 
 form {
-	margin-top: 5px;
+	margin: 20px 15px 0 0;
+}
+
+input {
+	font-size: 1rem;
 }
 
 .navBar{
 	position: fixed;
+	 background-color: rgba(255, 255, 255, 0.5); 
   width: 100%;
 	display:flex;
 	justify-content: space-between;
 	z-index: 3;
 }
+
 .navIcon {
 	width: 2rem;
 	height: 2rem;
 }
+
 .flex {
 	display: flex;
 	height: 2rem;
 }
+
 #homeLogo{
 	width: 4rem;
 	height: 4rem;
