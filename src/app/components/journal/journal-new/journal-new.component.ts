@@ -14,7 +14,7 @@ export class JournalNewComponent implements OnInit {
   public journals: JournalEntry[];
   public entry: JournalEntry;
   public params: string;
-  
+    
   constructor(private journalService: JournalService) { }
    
   ngOnInit() {
@@ -28,6 +28,12 @@ export class JournalNewComponent implements OnInit {
     console.log(paramters);
     // this.journalService.postEntry(encodeURI(paramters));  
     this.journalService.postEntry(paramters); 
+  }
+
+  reset() {
+    this.entry.title="";
+    this.entry.image="";
+    this.entry.content="";
   }
    
    // pushEntry(entry: JournalEntry){

@@ -25,8 +25,7 @@ export class JournalHomeComponent implements OnInit {
   ngOnInit() {
     this.journals = this.journalService.journals;
     this.journalService.getJournals();
-      
-    
+         
   }
    
 }
