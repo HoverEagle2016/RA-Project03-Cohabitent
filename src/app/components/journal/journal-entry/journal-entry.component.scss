@@ -1,46 +1,44 @@
-h3 {
+.journal-entry h3 {
 	font-size: 1.5rem;
 	font-family: fontAccentBold;	
 }
 
-i {
+.journal-entry i {
 	margin-right: 10px;
 }
 
-.site-content{
+.journal-entry .site-content{
 	display: flex;
+	padding-top: 72px;
 }
 
-.content-area {
+.journal-entry .content-area {
 	padding: 3%;
 	width: 67%;
 	border-top: 3px solid #e1e1e1;
 }
 
-.widget-area {
+.journal-entry .widget-area {
 	padding-left: 2%;
 	width: 27%;
 	float: right;
 	border-top: 3px solid #e1e1e1;
 	border-left: 3px solid #e1e1e1;
 }
-.site-content {
-	padding-top: 72px;
-}
 
-.entry-header {
+.journal-entry .entry-header {
 	position: relative;
 	width: 94%;
 }
 
-.entry-title {
+.journal-entry .entry-title {
 		background-color: #248a83;
 		color: white;
 		position: absolute;
 		top: 0;
 }
 
-.entry-meta {
+.journal-entry .entry-meta {
 	background-color: #248a83;
 	color: white;
 	position: absolute;
@@ -48,43 +46,43 @@ i {
 	right: 0;
 }
 
-.entry-content {
+.journal-entry .entry-content {
 	margin: 5vh 0;
 }
 
-.cat-link,.tags-link {
+.journal-entry .cat-link,.tags-link {
 font-family: MerriweatherBold;	
 margin: 10px;
 } 
 
-.cat-link {
+.journal-entry .cat-link {
 	margin-left: 0;
 }
 
-.social-btns {
+.journal-entry .social-btns {
 	margin: 10px 0;
 }
 
-.posted-on,.comments-link {
+.journal-entry .posted-on,.comments-link {
 	font-family: MerriweatherBold;
 }
 
-h1 {
+.journal-entry h1 {
 	font-family: Novecento Sans Web,sans-serif;
 	text-transform: uppercase;
 }
 
-img {
+.journal-entry img {
 	width: 100%;
 }
 
-a {
+.journal-entry a {
 	color: #248a83;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-input,textarea{
+.journal-entry input,textarea{
 	color: #666;
   background-color: #f4f4f4;
   border: 1px solid #e1e1e1;

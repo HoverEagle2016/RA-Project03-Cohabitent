@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 	moduleId: module.id,
   selector: 'cohab-journal-entry',
   templateUrl: './journal-entry.component.html',
-  styleUrls: ['journal-entry.component.css']
+  styleUrls: ['journal-entry.component.scss']
 })
 export class JournalEntryComponent implements OnInit {
 	sub: any;

@@ -10,20 +10,20 @@
 	flex-direction: row;
 }
 
-.alert-danger {
+.journal-new .alert-danger {
 	background-color: red;
 	color: white;
 }
 
-form{
+.journal-new form{
 	padding-top: 70px;
 }
 
-label {
+.journal-new label {
 	line-height: 1.2rem;
 }
 
-button {
+.journal-new button {
 	width:10%;
 	margin-left: 5%;
   font-family: Arial;
@@ -34,10 +34,10 @@ button {
   cursor: pointer;
   cursor: hand;
 }
-button:hover {
+.journal-new button:hover {
   background-color: #cfd8dc;
 }
-button:disabled {
+.journal-new button:disabled {
   background-color: #eee;
   color: #aaa;
   cursor: auto;

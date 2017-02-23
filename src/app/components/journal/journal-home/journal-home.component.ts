@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'cohab-journal-home',
   templateUrl: './journal-home.component.html', 
-  styleUrls: [ 'journal-home.component.css' ]
+  styleUrls: [ 'journal-home.component.scss' ]
 })
 
 export class JournalHomeComponent implements OnInit {

@@ -8,7 +8,7 @@ import {JournalEntry} from '../journal-entry';
   moduleId: module.id,
   selector: 'cohab-journal-new',
   templateUrl: './journal-new.component.html',
-  styleUrls: ['./journal-new.component.css']
+  styleUrls: ['./journal-new.component.scss']
 })
 export class JournalNewComponent implements OnInit {
   public journals: JournalEntry[];

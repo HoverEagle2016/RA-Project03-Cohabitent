@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 	
   selector: 'cohab-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
 

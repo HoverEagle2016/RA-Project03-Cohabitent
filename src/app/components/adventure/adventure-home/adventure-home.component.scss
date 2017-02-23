@@ -1,92 +1,92 @@
-h2 {
+.adventures h2 {
 	text-align: center;
 	font-family: fontAccentNormal;
 	font-size: 1.5rem;
 	margin: 40px 0;
 }
 
-ul{
+.adventures ul{
 	list-style-type: none;
 	padding-left: 0;
 }
 
-li:before {
+.adventures li:before {
 	  content: "";
     float: left;
 }
 
-li {
+.adventures li {
 	  float: left;
     position: relative;
     overflow: hidden;
 }
 
-li:first-child:before {
+.adventures li:first-child:before {
 	padding-top: 100%;
 }
 
-li:first-child {
+.adventures li:first-child {
 	border-right: 1vw solid white;
 	width: 48%;	
 }
 
-li:first-child h3 {
+.adventures li:first-child h3 {
 	font-size: 3rem;
 	line-height: 1.75;
 }
 
-li:nth-child(2):before {
+.adventures li:nth-child(2):before {
 	padding-top: calc(50% - 30px);
 }
 
-li:nth-child(2) {
+.adventures li:nth-child(2) {
 	width: 50%;		
 }
 
-li:nth-child(2) h3 {
+.adventures li:nth-child(2) h3 {
 	font-size: 2.4rem;
 	line-height: 1.75;
 }
 
-li:nth-child(3):before {
+.adventures li:nth-child(3):before {
 	padding-top: 100%;
 }
 
-li:nth-child(3){
+.adventures li:nth-child(3){
 	border-top: 8px solid white;
   border-right: 4px solid white;
 	width: 24.5%;	
 }
 
-li:nth-child(3) h3 {
+.adventures li:nth-child(3) h3 {
 	font-size: 1.5rem;
 	line-height: 1.2;
 }
 
-li:nth-child(3) img {
+.adventures li:nth-child(3) img {
 	top:63%;
 	left:20%;
 }
 
-li:last-child:before{
+.adventures li:last-child:before{
 padding-top: 100%
 }
 
-li:last-child{
+.adventures li:last-child{
 	border: 8px solid white;
 	width: 24.5%;	
 }
 
-li:last-child h3 {
+.adventures li:last-child h3 {
 	font-size: 1.5rem;
 	line-height: 1.2;
 }
 
-.bonfire-img{
+.adventures .bonfire-img{
 	top:100%;
 }
 
-img {
+.adventures img {
 	left: 50%;
   max-height: 620px;
   max-width: none;
@@ -98,7 +98,7 @@ img {
    filter: brightness(60%);
 	}
 
-.storyWrapper {
+.adventures .storyWrapper {
 		bottom: 0;
     left: 0;
     position: absolute;
@@ -107,18 +107,18 @@ img {
     z-index: 1;
 }
 
-.storyInfo {
+.adventures .storyInfo {
 		margin: 1.5rem;
 	  position: absolute;
     z-index: 2;
 }
 
-.clearfix:after {
+.adventures .clearfix:after {
     clear: both;
     content: "";
     display: table;
 }
 
-*, :after, :before {
+.adventures *, :after, :before {
     box-sizing: inherit;
 }
