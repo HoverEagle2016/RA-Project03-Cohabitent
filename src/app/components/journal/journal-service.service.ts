@@ -18,26 +18,24 @@ export class JournalService {
   private _journal: BehaviorSubject<JournalEntry>;
 
   private baseUrl: string;
+  fixed_getURL: string;
   private dataStore: {
     journals: JournalEntry[];
     journal: JournalEntry;
 	}
   
-
   private journalURL = "http://portal.helloitscody.com/inhabitent/api";
   private GET = "/get";
   private POST = "/post";
   private token = "/94a08da1fecbb6e8b46990538c7b50b2";
 
-
 	headers = new Headers({'Content-Type': 'application/json'});
 
 	entries: JournalEntry[] = <JournalEntry[]>[];
-	postURL: string;
-	fixed_getURL: string = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
+	postURL: string; 
 
   constructor(private http: Http) { 
-    this.baseUrl = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
+    this.fixed_getURL = "http://portal.helloitscody.com/inhabitent/api/get/94a08da1fecbb6e8b46990538c7b50b2/?params=%5B%7B%22name%22:%22posts_per_page%22,%22value%22:%225%22%7D,%7B%22name%22:%22paged%22,%22value%22:%221%22%7D%5D";
     this.dataStore = {
       journals: [],
       journal: new JournalEntry
@@ -86,7 +84,7 @@ export class JournalService {
     }
 
   getJournals() {
-    this.http.get(this.baseUrl).map(response => {
+    this.http.get(this.fixed_getURL).map(response => {
       return response.json();
     })
     .subscribe(data => {
@@ -104,7 +102,7 @@ export class JournalService {
   }
 
   getJournalById(id: string) {
-    this.http.get(this.baseUrl).map(response => {
+    this.http.get(this.fixed_getURL).map(response => {
       return response.json();
     })
     .subscribe(data => {    
