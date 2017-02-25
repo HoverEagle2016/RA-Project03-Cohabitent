@@ -1,3 +1,9 @@
+@mixin input {
+	line-height: 2rem;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+}
+
 .journal-entry h3 {
 	font-size: 1.5rem;
 	font-family: fontAccentBold;	
@@ -88,6 +94,37 @@ margin: 10px;
   border: 1px solid #e1e1e1;
   border-radius: 0;
 }
+
+.journal-entry .requiredInfo {
+	display: flex;
+	justify-content: space-between;
+}
+
+.journal-entry .comment-form-name, .journal-entry .comment-form-email {
+	width: 50%;
+}
+
+.journal-entry .commentLabel {
+	text-transform: uppercase;
+	font-family:  Novecento Sans Web,sans-serif; 
+	font-size: 1.1rem;
+}
+
+.journal-entry .reqiredInput {
+	 	width: 96%;
+    @include input;
+}
+
+.journal-entry .comment-form-url {
+	display: flex;
+	flex-direction: column;
+}
+
+.journal-entry .url {
+	@include input;
+	width: 98%;
+}
+
 
 
 
