@@ -1,5 +1,5 @@
 # RA-Project03-Cohabitent
-## [Live URL](https://cohabitent.firebaseapp.com/home) 
+## Live URL: [Cohabitent](https://cohabitent.firebaseapp.com/home) 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.31.
 
 ## Development server
