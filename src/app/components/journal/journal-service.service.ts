@@ -29,7 +29,9 @@ export class JournalService {
   private POST = "/post";
   private token = "/94a08da1fecbb6e8b46990538c7b50b2";
 
-	headers = new Headers({'Content-Type': 'application/json'});
+	headers = new Headers({'Content-Type': 'application/json',
+                          'Access-Control-Allow-Origin': 'http://portal.helloitscody.com'});
+
 
 	entries: JournalEntry[] = <JournalEntry[]>[];
 	postURL: string; 
